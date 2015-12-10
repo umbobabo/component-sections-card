@@ -1,0 +1,117 @@
+@import '@economist/component-grid';
+@import '@economist/component-typography';
+@import '@economist/component-palette';
+@import '@economist/component-icon';
+@import '@economist/component-link-button';
+
+:root {
+  --icon-canvas-size: 60px;
+  --icon-size: 30px;
+}
+
+.sections-card * {
+  box-sizing: border-box;
+}
+
+.sections-card {
+  font-size: 1rem;
+  font-family: var(--fontfamily-body);
+  font-weight: normal;
+  padding: var(--grid-gutter-s);
+  padding-top: calc(var(--grid-spacing-camel) - calc(var(--grid-spacing-donkey) / 2));
+  padding-bottom: 0;
+  color: var(--color-london);
+}
+
+.sections-card__wrapper {
+  font-size: var(--text-size-step--2);
+  line-height: var(--text-line-height-body-on-step--1);
+  margin: 0 auto;
+}
+
+.sections-card a {
+  text-decoration: none;
+  color: var(--sections-card-link-color, var(--color-kiev));
+}
+
+/* This makes the links have a bigger click area */
+.sections-card__list-sections a,
+.sections-card__list-blogs a {
+  display: block;
+}
+
+.sections-card__list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sections-card__link {
+  color: var(--color-london);
+}
+
+.sections-card .list__item {
+  display: block;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-bottom: 1em;
+}
+
+.sections-card__menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.sections-card__list {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+.sections-card__list-sections {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  max-width: 45%;
+  column-count: 2;
+}
+
+.sections-card__list-sections .list__item {
+  display: inline-block;
+  width: 100%;
+}
+
+.sections-card__list-media {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  max-width: 20%;
+}
+
+.sections-card__list-blogs {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  max-width: 20%;
+}
+
+.sections-card__list-media,
+.sections-card__list-blogs {
+  border-left: solid 1px var(--sections-card-border-left-color, var(--color-london));
+}
+
+.sections-card__list-media svg,
+.sections-card__list-media use {
+  fill: var(--sections-card__list-media-icon-fill, var(--color-honolulu));
+}
+
+.sections-card__list-media .Icon {
+  margin-right: 0.5em;
+}
+
+.sections-card__header {
+  margin-top: 0;
+  color: var(--sections-card__header-color, var(--color-kiev));
+}

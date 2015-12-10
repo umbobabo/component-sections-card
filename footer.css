@@ -1,0 +1,228 @@
+/*
+@import '@economist/component-reset';
+*/
+@import '@economist/component-grid';
+@import '@economist/component-typography';
+@import '@economist/component-palette';
+@import '@economist/component-icon';
+
+:root {
+  --icon-canvas-size: 60px;
+  --icon-size: 30px;
+  --icon-blank-space: calc(0.25 * 60px);
+}
+
+.sections-card * {
+  box-sizing: border-box;
+}
+
+.sections-card {
+  font-size: 1rem;
+  font-family: var(--fontfamily-body);
+  font-weight: normal;
+  background-color: var(--color-beijing);
+  border-top: var(--color-economist) solid .4rem;
+  padding: var(--grid-gutter-s);
+  padding-top: calc(var(--grid-spacing-camel) - calc(var(--grid-spacing-donkey) / 2));
+  padding-bottom: 0;
+  color: var(--color-london);
+}
+
+.sections-card__wrapper {
+  font-size: var(--text-size-step--1);
+  line-height: var(--text-line-height-body-on-step--1);
+  max-width: var(--site-max-width, 1000px);
+  margin: 0 auto;
+}
+
+/* A couple of footer-specific resets */
+.sections-card a:hover, .sections-card a:focus { opacity: 0.6; }
+.sections-card a:active { opacity: 0.3; }
+.sections-card ul { padding: 0; margin: 0; list-style: none; }
+.sections-card a { text-decoration: none; }
+
+/* This makes the links have a bigger click area */
+.sections-card a {
+  display: block;
+}
+
+.sections-card__link {
+  color: var(--color-london);
+}
+
+.sections-card__quote-paragraph {
+  margin: 0;
+}
+
+/* Standard spacing between pretty much everything :) */
+.sections-card__list .list__item .sections-card__link,
+.sections-card__header,
+.sections-card__quote-paragraph,
+.sections-card__copyright,
+.sections-card__subscribe-newsletter-link {
+  /* Divide by 2 because these are grids */
+  padding-top: calc(var(--grid-spacing-donkey) / 2);
+  padding-bottom: calc(var(--grid-spacing-donkey) / 2);
+}
+
+/* So kind of everything is going to have inline-block and be in 2 columns */
+.sections-card .list__item {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+/* Tablet means 4 columns pretty much everywhere */
+@media screen and (min-width: 650px) and (max-width: 1000px) {
+  .sections-card .list__item { width: 25%; }
+  .sections-card__list--subs .list__item {
+    padding-right: 0.5rem;
+  }
+  .sections-card__list--subs .list__item:nth-child(4n+4) {
+    padding-right: 0;
+  }
+}
+
+
+/* This makes sure that they stretch for flex to pick them up*/
+.sections-card__list--footnote .list__item,
+.sections-card__list--economist .list__item {
+  white-space: nowrap;
+}
+
+.sections-card__list--subs .sections-card__link {
+  color: var(--color-berlin);
+  font-weight: 700;
+}
+
+.sections-card__list--social .sections-card__header {
+  color: var(--color-moscow);
+  margin: 0;
+}
+
+.sections-card__list--social .list__item {
+  width: calc(var(--icon-size) * 2);  /* Icons are always spaced by 1 icon apart */
+}
+
+.sections-card__list--social .list {
+  margin: calc(-1 * var(--icon-blank-space));
+}
+.sections-card__list--social .list__item svg {
+  display: block;
+  margin: auto;
+}
+
+.sections-card .sections-card__subscribe-newsletter-icon {
+  margin: calc(-1 * var(--icon-blank-space));
+  margin-right: calc(calc(-1 * var(--icon-blank-space)) + var(--grid-spacing-rabbit));
+  vertical-align: middle;
+}
+
+.sections-card__quote {
+  text-align: center;
+  color: var(--color-moscow);
+  font-size: var(--text-size-step-1);
+  line-height: var(--text-line-height-body-on-step-1);
+  margin: auto;
+}
+.sections-card__quote em {
+  font-family: var(--fontfamily-display);
+}
+
+/* Make the text flow when the <br> don't make sense any more */
+@media screen and (max-width: 600px) {
+  .sections-card__quote br { display: none; }
+}
+
+.sections-card__footnote .sections-card__copyright {
+  font-size: var(--text-size-step--2);
+  line-height: var(--text-line-height-body-on-step--2);
+  color: var(--color-moscow);
+}
+
+/* mobile only */
+@media (max-width: 1000px) {
+  .sections-card__list--social,
+  .sections-card__list--economist,
+  .sections-card__quote,
+  .sections-card__footnote {
+    border-top: 1px solid var(--color-moscow);
+    margin-top: calc(var(--grid-spacing-camel) - calc(var(--grid-spacing-donkey) / 2));
+    padding-top: calc(var(--grid-spacing-camel) - calc(var(--grid-spacing-donkey) / 2));
+  }
+
+  .sections-card__copyright {
+    margin: calc(var(--grid-spacing-camel) - calc(var(--grid-spacing-donkey) / 2)) 0 0 0;
+    padding: var(--grid-spacing-sheep) 0;
+    border-top: 1px solid var(--color-moscow);
+  }
+}
+
+/* Desktop only */
+@media screen and (min-width: 1001px) {
+  .sections-card {
+    border-top-width: .6em;
+    padding: 0 var(--grid-gutter-l);
+  }
+
+  .sections-card__menu {
+    display: flex;
+  }
+  /* Vertical spacing overrides */
+  .sections-card__menu {
+    margin: var(--grid-spacing-camel) 0;
+  }
+  .sections-card__quote {
+    padding: calc(var(--grid-spacing-camel) - calc(var(--grid-spacing-donkey) / 2)) 0;
+    border-top: 1px solid var(--color-moscow);
+  }
+
+  /* footnote and copyright go side by side */
+  .sections-card__footnote {
+    display: flex;
+  }
+  .sections-card__copyright {
+    flex: 1;
+    text-align: right;
+  }
+
+  .sections-card__list {
+    padding: 0 var(--grid-spacing-donkey);
+  }
+  .sections-card__list--footnote {
+    padding: 0;
+  }
+
+  .sections-card__list--subs .list__item {
+    display: block;
+    width: auto;
+  }
+
+  .sections-card__list--social {
+    border-left: 1px solid var(--color-moscow);
+    border-right: 1px solid var(--color-moscow);
+    flex: 1 0 0;
+  }
+
+  .sections-card__list--social .list {
+    margin-right: calc(-1 * var(--icon-blank-space) * 3);  /* So that the last icon does not jump to the next line*/
+  }
+
+  .sections-card__list--economist {
+    flex: 0 1 30%;
+  }
+
+  .sections-card__footnote .sections-card__link,
+  .sections-card__footnote .sections-card__copyright {
+    font-size: var(--text-size-step--2);
+    line-height: var(--text-line-height-body-on-step--2);
+    margin: 0;  /* Reset <p> styling */
+  }
+
+  .sections-card__footnote .list__item {
+    padding-right: var(--grid-spacing-fox);
+    width: auto;
+  }
+  .sections-card__footnote .list__item:last-child {
+    padding-right: 0;
+  }
+}
