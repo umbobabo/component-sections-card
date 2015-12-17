@@ -36,12 +36,17 @@ export default class SectionsCard extends React.Component {
             className="sections-card__link sections-card__link--external"
             {...commonProps}
             target="_blank"
+            unstyled
           >
             {linkContents}
           </Button>
         );
       }
-      return (<Button className="sections-card__link" {...commonProps}>
+      return (<Button
+                className="sections-card__link"
+                {...commonProps}
+                unstyled
+              >
         {linkContents}
       </Button>);
     });
