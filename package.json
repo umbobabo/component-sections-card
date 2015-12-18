@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-sections-card",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Composition of a card to present sections of the website",
   "author": "The Economist (http://economist.com)",
   "license": "ISC",
@@ -107,7 +107,7 @@
     "ghpages_files": "*.html *.css *.js assets/"
   },
   "scripts": {
-    "build": "babel index.es6 --stage=0 --loose --ignore node_modules > index.js",
+    "build": "npm-assets . && babel index.es6 --stage=0 --loose --ignore node_modules > index.js",
     "ci": "./build.sh",
     "doc": "parallelshell 'npm run doc:html' 'npm run doc:js' 'npm run doc:css'",
     "doc:css": "cssnext --sourcemap example.css bundle.css",
@@ -132,7 +132,7 @@
   },
   "dependencies": {
     "@economist/component-grid": "^1.2.2",
-    "@economist/component-icon": "^3.2.0",
+    "@economist/component-icon": "^5.0.0",
     "@economist/component-link-button": "^1.1.0",
     "@economist/component-list": "^1.0.0",
     "@economist/component-palette": "^1.0.1",
@@ -140,7 +140,6 @@
   },
   "devDependencies": {
     "@economist/component-devpack": "^3.6.0",
-    "@economist/component-navigation": "^1.0.0",
     "babel": "^5.8.23",
     "babelify": "^6.3.0",
     "browser-sync": "^2.8.2",
