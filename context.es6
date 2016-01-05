@@ -6,63 +6,63 @@ export default {
     },
     {
       title: 'Britain',
-      href: 'http://www.economist.com/sections/britain',
+      href: '/sections/britain',
     },
     {
       title: 'Europe',
-      href: 'http://www.economist.com/sections/europe',
+      href: '/sections/europe',
     },
     {
       title: 'United States',
-      href: 'http://www.economist.com/sections/united-states',
+      href: '/sections/united-states',
     },
     {
       title: 'The Americas',
-      href: 'http://www.economist.com/sections/americas',
+      href: '/sections/americas',
     },
     {
       title: 'Middle East & Africa',
-      href: 'http://www.economist.com/sections/middle-east-africa',
+      href: '/sections/middle-east-africa',
     },
     {
       title: 'Asia',
-      href: 'http://www.economist.com/sections/asia',
+      href: '/sections/asia',
     },
     {
       title: 'China',
-      href: 'http://www.economist.com/sections/china',
+      href: '/sections/china',
     },
     {
       title: 'International',
-      href: 'http://www.economist.com/sections/international',
+      href: '/sections/international',
     },
     {
       title: 'Business',
-      href: 'http://www.economist.com/sections/business-finance',
+      href: '/sections/business-finance',
     },
     {
       title: 'Finance & Economics',
-      href: 'http://www.economist.com/sections/economics',
+      href: '/sections/economics',
     },
     {
       title: 'Science & Technology',
-      href: 'http://www.economist.com/sections/science-technology',
+      href: '/sections/science-technology',
     },
     {
       title: 'Books & Arts',
-      href: 'http://www.economist.com/sections/culture',
+      href: '/sections/culture',
     },
     {
       title: 'Obituaries',
-      href: 'http://www.economist.com/sections/obituary',
+      href: '/sections/obituary',
     },
     {
       title: 'Leaders',
-      href: 'http://www.economist.com/sections/leaders',
+      href: '/sections/leaders',
     },
     {
       title: 'Briefing',
-      href: 'http://www.economist.com/sections/briefing',
+      href: '/sections/briefing',
     },
     {
       title: 'Debate',
@@ -92,43 +92,43 @@ export default {
   blogs: [
     {
       title: 'Buttonwood\'s notebook',
-      href: 'http://www.economist.com/blogs/buttonwood',
+      href: '/blogs/buttonwood',
     },
     {
       title: 'Erasmus',
-      href: 'http://www.economist.com/blogs/erasmus',
+      href: '/blogs/erasmus',
     },
     {
       title: 'Game theory',
-      href: 'http://www.economist.com/blogs/gametheory',
+      href: '/blogs/gametheory',
     },
     {
       title: 'Gulliver',
-      href: 'http://www.economist.com/blogs/gulliver',
+      href: '/blogs/gulliver',
     },
     {
       title: 'The Economist explains',
-      href: 'http://www.economist.com/blogs/economist-explains',
+      href: '/blogs/economist-explains',
     },
     {
       title: 'Bagehot\'s notebook',
-      href: 'http://www.economist.com/blogs/bagehot',
+      href: '/blogs/bagehot',
     },
     {
       title: 'Democracy in America',
-      href: 'http://www.economist.com/blogs/democracyinamerica',
+      href: '/blogs/democracyinamerica',
     },
     {
       title: 'Free exchange',
-      href: 'http://www.economist.com/blogs/freeexchange',
+      href: '/blogs/freeexchange',
     },
     {
       title: 'Graphic detail',
-      href: 'http://www.economist.com/blogs/graphicdetail',
+      href: '/blogs/graphicdetail',
     },
     {
       title: 'Prospero',
-      href: 'http://www.economist.com/blogs/prospero',
+      href: '/blogs/prospero',
     }
   ]
 };
