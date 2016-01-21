@@ -19,14 +19,14 @@
 
 .sections-card {
   font-size: 1rem;
-  font-family: var(--fontfamily-body);
+  font-family: var(--fontfamily-sans);
   font-weight: normal;
   padding: 0;
   color: var(--color-london);
 }
 
 .sections-card__wrapper {
-  line-height: var(--text-line-height-body-on-step--1);
+  line-height: var(--text-line-height-sans-on-step--1);
   margin: 0 auto;
 }
 
