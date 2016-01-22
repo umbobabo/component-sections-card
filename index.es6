@@ -16,20 +16,14 @@ export default class SectionsCard extends React.Component {
     }
     return {};
   }
-  renderListContent(array, { iconColor = '#B6B6B6' } = {}) {
+  renderListContent(array) {
     return array.map((item) => {
       let linkContents = item.title;
       const commonProps = {
-        href: item.href,
         key: `${item.title}-${item.meta}-${item.internal}-${item.href}`,
         unstyled: true,
+        ...item,
       };
-      if (item.meta) {
-        commonProps.icon = {
-          icon: item.meta,
-          size: '28px',
-        };
-      }
       if (item.internal === false) {
         return (
           <Button
