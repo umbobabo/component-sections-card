@@ -37,22 +37,17 @@
 }
 
 .sections-card__list-media a {
-  text-indent: 2em;
   background-size: 1.8em;
   background-position: 5px center;
 }
 
 /* This makes the links have a bigger click area */
-.sections-card__list-sections a,
-.sections-card__list-blogs a,
-.sections-card__list-media a {
+.sections-card__list a {
   display: block;
   padding-left: 0.5em;
 }
 
-.sections-card__list-sections a:hover,
-.sections-card__list-blogs a:hover,
-.sections-card__list-media a:hover {
+.sections-card__list a:hover {
   background-color: color(var(--color-london) a(-70%));
   display:block;
   overflow:visible;
