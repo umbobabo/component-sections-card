@@ -36,10 +36,21 @@
   font-size: var(--text-size-step--2);
 }
 
+.sections-card__list-media a {
+  background-size: 1.8em;
+  background-position: 5px center;
+}
+
 /* This makes the links have a bigger click area */
-.sections-card__list-sections a,
-.sections-card__list-blogs a {
+.sections-card__list a {
   display: block;
+  padding-left: 0.5em;
+}
+
+.sections-card__list a:hover {
+  background-color: color(var(--color-london) a(-70%));
+  display:block;
+  overflow:visible;
 }
 
 .sections-card__list {
@@ -56,6 +67,7 @@
   padding: 0;
 }
 
+
 .sections-card__link {
   color: var(--color-london);
 }
@@ -68,6 +80,8 @@
   float: left;
   width: 100%;
 }
+
+
 
 .sections-card .list__item:last-child {
   margin-bottom: 0;
@@ -90,6 +104,12 @@
   column-count: 2;
 }
 
+@media (max-width: 940px) {
+.sections-card__list-sections {
+  max-width:none;
+  }
+}
+
 .sections-card__list-sections .list__item {
   display: inline-block;
   width: 100%;
@@ -102,12 +122,31 @@
   max-width: 20%;
 }
 
+@media (max-width: 1000px) {
+.sections-card__list-media {
+  max-width:none;
+  }
+}
+
 .sections-card__list-blogs {
   order: 0;
   flex: 1 1 auto;
   align-self: auto;
   max-width: 20%;
 }
+
+@media (max-width: 1500px) {
+.sections-card__list-blogs {
+  max-width:22%;
+  }
+}
+
+@media (max-width: 1400px) {
+.sections-card__list-blogs {
+  max-width:none;
+  }
+}
+
 
 .sections-card__list-media,
 .sections-card__list-blogs {
@@ -116,7 +155,7 @@
 
 .sections-card__list-media svg,
 .sections-card__list-media use {
-  fill: var(--sections-card__list-media-icon-fill, var(--color-honolulu));
+  fill: var(--sections-card__list-media-icon-fill, var(--color-chicago));
 }
 
 .sections-card__list-media .Icon {
@@ -131,6 +170,7 @@
   /* TODO: Need to be fixed when we will have the font */
   font-family:  'Halifax Bold', Tahoma, sans-serif;
   font-weight: normal;
+  padding-left: 0.5em;
 }
 
 .sections-card__link.link-button--icon svg {
