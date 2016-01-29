@@ -8,6 +8,7 @@ context.media.map((mediaLink) => {
     color: 'chicago',
     icon: mediaLink.meta,
   };
+  return mediaLink;
 });
 
 export default (
