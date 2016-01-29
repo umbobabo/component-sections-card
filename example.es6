@@ -10,7 +10,6 @@ context.media.map((mediaLink) => {
   };
 });
 
-console.log(context.media[0]);
 export default (
   <SectionsCard data={context} />
 );
