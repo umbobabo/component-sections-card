@@ -17,10 +17,10 @@ export default class SectionsCard extends React.Component {
     return {};
   }
   renderListContent(array) {
-    return array.map((item) => {
+    return array.map((item, i) => {
       let linkContents = item.title;
       const commonProps = {
-        key: `${item.title}-${item.meta}-${item.internal}-${item.href}`,
+        key: `${i}`,
         unstyled: true,
         ...item,
       };
