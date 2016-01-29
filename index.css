@@ -48,9 +48,7 @@
 }
 
 .sections-card__list a:hover {
-  background-color: color(var(--color-london) a(-70%));
-  display:block;
-  overflow:visible;
+  color: var(--color-chicago);
 }
 
 .sections-card__list {
@@ -104,11 +102,6 @@
   column-count: 2;
 }
 
-@media (max-width: 940px) {
-.sections-card__list-sections {
-  max-width:none;
-  }
-}
 
 .sections-card__list-sections .list__item {
   display: inline-block;
@@ -120,12 +113,11 @@
   flex: 1 1 auto;
   align-self: auto;
   max-width: 20%;
+  text-align: center;
 }
 
-@media (max-width: 1000px) {
-.sections-card__list-media {
-  max-width:none;
-  }
+.sections-card__list-media a {
+  padding-left: 0;
 }
 
 .sections-card__list-blogs {
@@ -133,18 +125,6 @@
   flex: 1 1 auto;
   align-self: auto;
   max-width: 20%;
-}
-
-@media (max-width: 1500px) {
-.sections-card__list-blogs {
-  max-width:22%;
-  }
-}
-
-@media (max-width: 1400px) {
-.sections-card__list-blogs {
-  max-width:none;
-  }
 }
 
 
