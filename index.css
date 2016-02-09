@@ -134,9 +134,7 @@
   color: var(--sections-card__header-color, var(--color-kiev));
   text-transform: uppercase;
   font-size: var(--text-size-step--2);
-  /* TODO: Need to be fixed when we will have the font */
-  font-family:  'Halifax Bold', Tahoma, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   padding-left: 0.5em;
 }
 
