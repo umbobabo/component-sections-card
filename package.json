@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-sections-card",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Composition of a card to present sections of the website",
   "author": "The Economist (http://economist.com)",
   "license": "ISC",
