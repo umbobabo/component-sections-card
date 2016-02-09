@@ -1,6 +1,6 @@
 {
   "name": "@economist/component-sections-card",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "Composition of a card to present sections of the website",
   "author": "The Economist (http://economist.com)",
   "license": "ISC",
@@ -135,7 +135,7 @@
     "@economist/component-link-button": "^1.1.0",
     "@economist/component-list": "^1.0.0",
     "@economist/component-palette": "^1.0.1",
-    "@economist/component-typography": "^2.0.0"
+    "@economist/component-typography": "^3.1.1"
   },
   "devDependencies": {
     "@economist/component-devpack": "^3.6.0",
