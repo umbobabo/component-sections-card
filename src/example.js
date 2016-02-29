@@ -1,8 +1,8 @@
 import React from 'react';
-import context from './context';
 import SectionsCard from './index';
+import sectionsCardData from './context';
 
-context.media.map((mediaLink) => {
+sectionsCardData.media.map((mediaLink) => {
   mediaLink.icon = {
     useBackground: true,
     color: 'chicago',
@@ -12,5 +12,5 @@ context.media.map((mediaLink) => {
 });
 
 export default (
-  <SectionsCard data={context} />
+  <SectionsCard data={sectionsCardData} />
 );

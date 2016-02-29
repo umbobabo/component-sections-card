@@ -67,7 +67,7 @@ export default {
     {
       title: 'Debate',
       href: 'http://debates.economist.com/',
-    }
+    },
   ],
   media: [
     {
@@ -87,7 +87,7 @@ export default {
       meta: 'film',
       href: 'http://films.economist.com/',
       internal: false,
-    }
+    },
   ],
   blogs: [
     {
@@ -129,6 +129,6 @@ export default {
     {
       title: 'Prospero',
       href: '/blogs/prospero',
-    }
-  ]
+    },
+  ],
 };

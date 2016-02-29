@@ -1,0 +1,11 @@
+@import './index.css';
+@import '@economist/component-icon/backgrounds/headset.css';
+@import '@economist/component-icon/backgrounds/video.css';
+@import '@economist/component-icon/backgrounds/film.css';
+
+/* stylelint-disable selector-no-type */
+
+body {
+  background: var(--color-berlin);
+}
+/* stylelint-enable selector-no-type */
