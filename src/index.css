@@ -1,7 +1,7 @@
 @import '@economist/component-grid';
 @import '@economist/component-typography';
 @import '@economist/component-palette';
-@import '@economist/component-icon';
+@import '@economist/component-icon/lib';
 @import '@economist/component-link-button';
 
 :root {

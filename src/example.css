@@ -1,4 +1,6 @@
 @import './index.css';
+@import '@economist/component-icon/backgrounds/apps.css';
+@import '@economist/component-icon/backgrounds/radio.css';
 @import '@economist/component-icon/backgrounds/headset.css';
 @import '@economist/component-icon/backgrounds/video.css';
 @import '@economist/component-icon/backgrounds/film.css';

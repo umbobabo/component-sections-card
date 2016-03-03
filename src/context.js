@@ -71,8 +71,20 @@ export default {
   ],
   media: [
     {
+      title: 'Apps',
+      meta: 'apps',
+      href: 'http://www.economist.com/audio-edition',
+      internal: false,
+    },
+    {
       title: 'Audio',
       meta: 'headset',
+      href: 'http://www.economist.com/audio-edition',
+      internal: false,
+    },
+    {
+      title: 'Radio',
+      meta: 'radio',
       href: 'http://www.economist.com/audio-edition',
       internal: false,
     },
