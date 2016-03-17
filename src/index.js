@@ -22,10 +22,6 @@ export default class SectionsCard extends React.Component {
     };
   }
 
-  shouldComponentUpdate() {
-    return false;
-  }
-
   targetIfNeeded({ internal }) {
     if (internal === false) {
       return { target: '_blank' };
