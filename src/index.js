@@ -28,7 +28,7 @@ export default class SectionsCard extends React.Component {
     }
     return {};
   }
-  renderListContent(linkList) {
+  renderListContent(linkList = []) {
     return linkList.map((link, i) => {
       const commonProps = {
         key: `${ i }`,
