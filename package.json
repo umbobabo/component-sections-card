@@ -115,15 +115,15 @@
     ]
   },
   "dependencies": {
-    "@economist/component-grid": "^1.2.2",
     "@economist/component-icon": "^5.10.0",
     "@economist/component-link-button": "^3.0.1",
     "@economist/component-list": "^1.0.0",
-    "@economist/component-palette": "^1.0.1",
-    "@economist/component-typography": "^3.1.1",
     "react": "^0.14.8"
   },
   "devDependencies": {
+    "@economist/component-grid": "^1.2.2",
+    "@economist/component-palette": "^1.0.1",
+    "@economist/component-typography": "^3.1.1",
     "@economist/doc-pack": "^1.0.6",
     "@economist/provision-react-component": "1.7.0",
     "babel": "^5.8.34",
