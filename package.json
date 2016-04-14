@@ -116,7 +116,6 @@
   "dependencies": {
     "@economist/component-icon": "^5.10.0",
     "@economist/component-link-button": "^3.0.1",
-    "@economist/component-list": "^1.0.0",
     "react": "^0.14.8"
   },
   "devDependencies": {

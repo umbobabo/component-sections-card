@@ -1,5 +1,4 @@
 import Button from '@economist/component-link-button';
-import List from '@economist/component-list';
 import React from 'react';
 
 export default class SectionsCard extends React.Component {
@@ -37,26 +36,30 @@ export default class SectionsCard extends React.Component {
       };
       if (link.internal === false) {
         return (
+          <li className="list__item" key={`sections-card__link_${ i }`}>
+            <Button
+              className="sections-card__link sections-card__link--external"
+              {...commonProps}
+              target="_blank"
+              unstyled
+            >
+              {link.title}
+            </Button>
+          </li>
+        );
+      }
+      return (
+        <li className="list__item" key={`sections-card__link_${ i }`}>
           <Button
             key={`sections-card__link_${ i }`}
-            className="sections-card__link sections-card__link--external"
+            className="sections-card__link"
             {...commonProps}
-            target="_blank"
             unstyled
           >
             {link.title}
           </Button>
-        );
-      }
-      return (
-        <Button
-          key={`sections-card__link_${ i }`}
-          className="sections-card__link"
-          {...commonProps}
-          unstyled
-        >
-        {link.title}
-      </Button>);
+        </li>
+      );
     });
   }
   render() {
@@ -64,21 +67,29 @@ export default class SectionsCard extends React.Component {
     const { titles } = this.props;
     const sections = [];
     if (titles.sections) {
-      sections.push(<h4 className="sections-card__header">{titles.sections}</h4>);
+      sections.push(
+        <h4 className="sections-card__header" key="sections-card__header">
+          {titles.sections}
+        </h4>
+      );
     }
     sections.push(
-      <List>
+      <ul className="list" key="sections-card__sections">
         {this.renderListContent(sectionsCardData.sections)}
-      </List>
+      </ul>
     );
     const blogs = [];
     if (titles.blogs) {
-      blogs.push(<h4 className="sections-card__header">{titles.blogs}</h4>);
+      blogs.push(
+        <h4 className="sections-card__header" key="sections-card__header">
+          {titles.blogs}
+        </h4>
+      );
     }
     blogs.push(
-      <List>
+      <ul className="list" key="sections-card__blogs">
         {this.renderListContent(sectionsCardData.blogs)}
-      </List>
+      </ul>
     );
     return (
       <nav role="nav" className="sections-card">
@@ -88,9 +99,9 @@ export default class SectionsCard extends React.Component {
               {sections}
             </div>
             <div className="sections-card__list sections-card__list-media">
-              <List>
+              <ul className="list">
                 {this.renderListContent(sectionsCardData.media)}
-              </List>
+              </ul>
             </div>
             <div className="sections-card__list sections-card__list-blogs">
               {blogs}
