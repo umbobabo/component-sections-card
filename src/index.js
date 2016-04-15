@@ -24,15 +24,11 @@ SectionsCard.defaultProps = {
 
 
 if (process.env.NODE_ENV !== 'production') {
-  const LinkType = React.PropTypes.shape({
-    href: React.PropTypes.string.isRequired,
-    title: React.PropTypes.string.isRequired,
-  });
   SectionsCard.propTypes = {
     data: React.PropTypes.shape({ // eslint-disable-line id-blacklist
-      blogs: React.PropTypes.arrayOf(LinkType),
-      media: React.PropTypes.arrayOf(LinkType),
-      sections: React.PropTypes.arrayOf(LinkType),
+      blogs: SectionCardList.propTypes.links,
+      media: SectionCardList.propTypes.links,
+      sections: SectionCardList.propTypes.links,
     }).isRequired, // eslint-disable-line id-blacklist
     titles: React.PropTypes.shape({
       blogs: React.PropTypes.string,
