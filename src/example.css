@@ -1,4 +1,7 @@
 @import './index.css';
+@import '@economist/component-grid';
+@import '@economist/component-typography';
+@import '@economist/component-palette';
 @import '@economist/component-icon/backgrounds/apps.css';
 @import '@economist/component-icon/backgrounds/radio.css';
 @import '@economist/component-icon/backgrounds/headset.css';

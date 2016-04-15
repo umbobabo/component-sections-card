@@ -1,6 +1,3 @@
-@import '@economist/component-grid';
-@import '@economist/component-typography';
-@import '@economist/component-palette';
 @import '@economist/component-icon/lib';
 @import '@economist/component-link-button';
 
@@ -107,7 +104,9 @@
 
 .sections-card__list-media .link-button.link-button--icon-background {
   padding-left: 2.5em;
+  cursor: pointer;
   background-position: 5px center;
+  background-repeat: no-repeat;
   background-size: 1.8em;
 }
 

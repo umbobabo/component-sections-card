@@ -1,103 +1,38 @@
-import Button from '@economist/component-link-button';
-import List from '@economist/component-list';
 import React from 'react';
+import SectionCardList from './parts/section-card-list';
 
-export default class SectionsCard extends React.Component {
-
-  static get propTypes() {
-    return {
-      data: React.PropTypes.object, // eslint-disable-line id-blacklist
-      titles: React.PropTypes.shape({
-        blogs: React.PropTypes.string,
-        sections: React.PropTypes.string,
-      }),
-    };
-  }
-
-  static get defaultProps() {
-    return {
-      titles: {
-        blogs: 'Blogs',
-      },
-    };
-  }
-
-  targetIfNeeded({ internal }) {
-    if (internal === false) {
-      return { target: '_blank' };
-    }
-    return {};
-  }
-  renderListContent(linkList = []) {
-    return linkList.map((link, i) => {
-      const commonProps = {
-        key: `${ i }`,
-        unstyled: true,
-        ...link,
-      };
-      if (link.internal === false) {
-        return (
-          <Button
-            key={`sections-card__link_${ i }`}
-            className="sections-card__link sections-card__link--external"
-            {...commonProps}
-            target="_blank"
-            unstyled
-          >
-            {link.title}
-          </Button>
-        );
-      }
-      return (
-        <Button
-          key={`sections-card__link_${ i }`}
-          className="sections-card__link"
-          {...commonProps}
-          unstyled
-        >
-        {link.title}
-      </Button>);
-    });
-  }
-  render() {
-    const sectionsCardData = this.props.data;
-    const { titles } = this.props;
-    const sections = [];
-    if (titles.sections) {
-      sections.push(<h4 className="sections-card__header">{titles.sections}</h4>);
-    }
-    sections.push(
-      <List>
-        {this.renderListContent(sectionsCardData.sections)}
-      </List>
-    );
-    const blogs = [];
-    if (titles.blogs) {
-      blogs.push(<h4 className="sections-card__header">{titles.blogs}</h4>);
-    }
-    blogs.push(
-      <List>
-        {this.renderListContent(sectionsCardData.blogs)}
-      </List>
-    );
-    return (
-      <nav role="nav" className="sections-card">
-        <div className="sections-card__wrapper">
-          <div className="sections-card__menu">
-            <div className="sections-card__list sections-card__list-sections">
-              {sections}
-            </div>
-            <div className="sections-card__list sections-card__list-media">
-              <List>
-                {this.renderListContent(sectionsCardData.media)}
-              </List>
-            </div>
-            <div className="sections-card__list sections-card__list-blogs">
-              {blogs}
-            </div>
-          </div>
+export default function SectionsCard({ data, titles }) { // eslint-disable-line id-blacklist
+  const links = data; // eslint-disable-line id-blacklist
+  return (
+    <nav role="nav" className="sections-card">
+      <div className="sections-card__wrapper">
+        <div className="sections-card__menu">
+          <SectionCardList topic="sections" links={links.sections} title={titles.sections} />
+          <SectionCardList topic="media" links={links.media} />
+          <SectionCardList topic="blogs" links={links.blogs} title={titles.blogs} />
         </div>
-      </nav>
-    );
-  }
+      </div>
+    </nav>
+  );
+}
+
+SectionsCard.defaultProps = {
+  titles: {
+    blogs: 'Blogs',
+  },
+};
+
+
+if (process.env.NODE_ENV !== 'production') {
+  SectionsCard.propTypes = {
+    data: React.PropTypes.shape({ // eslint-disable-line id-blacklist
+      blogs: SectionCardList.propTypes.links,
+      media: SectionCardList.propTypes.links,
+      sections: SectionCardList.propTypes.links,
+    }).isRequired, // eslint-disable-line id-blacklist
+    titles: React.PropTypes.shape({
+      blogs: React.PropTypes.string,
+      sections: React.PropTypes.string,
+    }).isRequired,
+  };
 }
