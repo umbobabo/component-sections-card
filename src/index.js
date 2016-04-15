@@ -30,31 +30,21 @@ export default class SectionsCard extends React.Component {
   renderListContent(linkList = []) {
     return linkList.map((link, i) => {
       const commonProps = {
-        key: `${ i }`,
         unstyled: true,
         ...link,
       };
+      let className = 'sections-card__link';
       if (link.internal === false) {
-        return (
-          <li className="list__item" key={`sections-card__link_${ i }`}>
-            <Button
-              className="sections-card__link sections-card__link--external"
-              {...commonProps}
-              target="_blank"
-              unstyled
-            >
-              {link.title}
-            </Button>
-          </li>
-        );
+        commonProps.target = '_blank';
+        className = `${ className } sections-card__link--external`;
       }
       return (
         <li className="list__item" key={`sections-card__link_${ i }`}>
           <Button
-            key={`sections-card__link_${ i }`}
-            className="sections-card__link"
             {...commonProps}
             unstyled
+            key={`sections-card__link_${ i }`}
+            className={className}
           >
             {link.title}
           </Button>
