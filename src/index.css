@@ -7,10 +7,12 @@
 }
 
 /* stylelint-disable selector-no-universal */
+/* because not gonna list all the classes */
 
 .sections-card * {
   box-sizing: border-box;
 }
+
 /* stylelint-enable selector-no-universal */
 
 .sections-card {
@@ -54,7 +56,6 @@
 
 .sections-card .list__item {
   display: block;
-  vertical-align: top;
   width: 100%;
   line-height: 1.7em;
   white-space: nowrap;
@@ -123,11 +124,13 @@
 }
 
 /* stylelint-disable selector-no-type */
+/* class of the svg not available */
 
 .sections-card__list-media svg,
 .sections-card__list-media use {
   fill: var(--sections-card__list-media-icon-fill, var(--color-chicago));
 }
+
 /* stylelint-enable selector-no-type */
 
 .sections-card__list-media .Icon {
@@ -144,11 +147,13 @@
 }
 
 /* stylelint-disable selector-no-type */
+/* class of the svg not available */
 
 .sections-card__link.link-button--icon svg {
   vertical-align: middle;
   width: 24px;
 }
+
 /* stylelint-enable selector-no-type */
 
 @media (width <= 1000px) {
