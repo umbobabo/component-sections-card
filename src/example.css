@@ -9,8 +9,10 @@
 @import '@economist/component-icon/backgrounds/film.css';
 
 /* stylelint-disable selector-no-type */
+/* thankfully only the example ;) */
 
 body {
   background: var(--color-berlin);
 }
+
 /* stylelint-enable selector-no-type */
