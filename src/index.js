@@ -8,7 +8,7 @@ export default function SectionsCard({ data, titles }) { // eslint-disable-line 
       <div className="sections-card__wrapper">
         <div className="sections-card__menu">
           <SectionCardList topic="sections" links={links.sections} title={titles.sections} />
-          <SectionCardList topic="media" links={links.media} />
+          <SectionCardList topic="media" links={links.media} title={titles.media} />
           <SectionCardList topic="blogs" links={links.blogs} title={titles.blogs} />
         </div>
       </div>
