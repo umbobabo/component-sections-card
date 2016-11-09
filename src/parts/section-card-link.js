@@ -1,9 +1,9 @@
 import Button from '@economist/component-link-button';
 import React from 'react';
 
-export default function SectionCardLink({ buttonClassName, title, buttonProps }) {
+export default function SectionCardLink({ buttonClassName, title, buttonProps, prefix }) {
   return (
-    <li className="list__item">
+    <li className={`${ prefix }__list-item`}>
       <Button
         {...buttonProps}
         className={buttonClassName}
@@ -24,5 +24,6 @@ if (process.env.NODE_ENV !== 'production') {
       title: React.PropTypes.string,
     }),
     title: React.PropTypes.string,
+    prefix: React.PropTypes.string,
   };
 }

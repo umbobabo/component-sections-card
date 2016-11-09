@@ -2,13 +2,14 @@ import React from 'react';
 import SectionCardLinks from './section-card-links';
 import SectionCardTitle from './section-card-title';
 
-export default function SectionCardList({ title, links, topic }) {
+export default function SectionCardList({ title, links, topic, prefix }) {
   const content = [];
   if (title) {
     content.push(
       <SectionCardTitle
         key={`section-title-${ topic }`}
         title={title}
+        prefix={prefix}
       />
     );
   }
@@ -16,10 +17,11 @@ export default function SectionCardList({ title, links, topic }) {
     <SectionCardLinks
       key={`section-links-${ topic }`}
       links={links}
+      prefix={prefix}
     />
   );
   return (
-    <div className={`sections-card__list sections-card__list-${ topic }`}>
+    <div className={`${ prefix }__list-wrapper ${ prefix }__list-wrapper--${ topic }`}>
       {content}
     </div>
   );
@@ -35,5 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
       })
     ).isRequired,
     topic: React.PropTypes.string,
+    className: React.PropTypes.string,
+    prefix: React.PropTypes.string,
   };
 }

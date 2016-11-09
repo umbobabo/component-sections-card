@@ -1,28 +1,29 @@
 import React from 'react';
 import SectionCardLink from './section-card-link';
 
-export default function SectionCardLinks({ links }) {
+export default function SectionCardLinks({ links, prefix }) {
   const renderedLinks = links.map((link, i) => {
     const commonProps = {
       unstyled: true,
       ...link,
     };
-    let buttonClassName = 'sections-card__link';
+    let buttonClassName = `${ prefix }__link`;
     if (link.internal === false) {
       commonProps.target = '_blank';
-      buttonClassName = `${ buttonClassName } sections-card__link--external`;
+      buttonClassName = `${ buttonClassName } ${ prefix }__link--external`;
     }
     return (
       <SectionCardLink
         buttonClassName={buttonClassName}
         buttonProps={commonProps}
-        key={`sections-card__link_${ i }`}
+        key={`${ prefix }__link_${ i }`}
         title={link.title}
+        prefix={prefix}
       />
     );
   });
   return (
-    <ul className="list">
+    <ul className={`${ prefix }__list`}>
       {renderedLinks}
     </ul>
   );
@@ -36,5 +37,6 @@ if (process.env.NODE_ENV !== 'production') {
         title: React.PropTypes.string.isRequired,
       })
     ).isRequired,
+    prefix: React.PropTypes.string,
   };
 }

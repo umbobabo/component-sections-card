@@ -36,16 +36,16 @@
   text-decoration: none;
 }
 
-.sections-card__list .link-button:hover {
+.sections-card__list-wrapper .link-button:hover {
   color: var(--color-chicago);
 }
 
-.sections-card__list {
+.sections-card__list-wrapper {
   box-sizing: border-box;
   padding: 0 3em;
 }
 
-.sections-card__list .list {
+.sections-card__list {
   margin: 0;
   padding: 0;
 }
@@ -54,14 +54,15 @@
   color: var(--color-london);
 }
 
-.sections-card .list__item {
+.sections-card__list-item {
   display: block;
   width: 100%;
   line-height: 1.7em;
+  text-align: left;
   white-space: nowrap;
 }
 
-.sections-card .list__item:last-child {
+.sections-card__list-item:last-child {
   margin-bottom: 0;
 }
 
@@ -74,18 +75,14 @@
   justify-content: flex-start;
 }
 
-.sections-card__list-sections {
+.sections-card__list-wrapper--sections {
   max-width: 50%;
   align-self: auto;
   flex: 1 1 auto;
   order: 0;
 }
 
-.sections-card__list-sections .list {
-  column-count: 2;
-}
-
-.sections-card__list-media {
+.sections-card__list-wrapper--media {
   max-width: 20%;
   align-self: auto;
   flex: 1 1 auto;
@@ -93,51 +90,33 @@
   text-align: center;
 }
 
-.sections-card__list-media .list {
-  display: inline-block;
-}
-
-.sections-card__list-media .list__item {
-  clear: both;
-  display: inline;
-  text-align: left;
-}
-
-.sections-card__list-media .link-button.link-button--icon-background {
-  padding-left: 2.5em;
-  cursor: pointer;
-  background-position: 5px center;
-  background-repeat: no-repeat;
-  background-size: 1.8em;
-}
-
-.sections-card__list-blogs {
+.sections-card__list-wrapper--blogs {
   max-width: 20%;
   align-self: auto;
   flex: 1 1 auto;
   order: 0;
 }
 
-.sections-card__list-media,
-.sections-card__list-blogs {
+.sections-card__list-wrapper--media,
+.sections-card__list-wrapper--blogs {
   border-left: solid 1px var(--sections-card-border-left-color, var(--color-london));
 }
 
 /* stylelint-disable selector-no-type */
 /* class of the svg not available */
 
-.sections-card__list-media svg,
-.sections-card__list-media use {
+.sections-card__list-wrapper--media svg,
+.sections-card__list-wrapper--media use {
   fill: var(--sections-card__list-media-icon-fill, var(--color-chicago));
 }
 
 /* stylelint-enable selector-no-type */
 
-.sections-card__list-media .Icon {
+.sections-card__list-wrapper--media .Icon {
   margin-right: 0.5em;
 }
 
-.sections-card__header {
+.sections-card__list-header {
   margin-top: 0;
   padding-left: 0.5em;
   color: var(--sections-card__header-color, var(--color-kiev));
@@ -157,7 +136,7 @@
 /* stylelint-enable selector-no-type */
 
 @media (width <= 1000px) {
-  .sections-card .sections-card__list {
+  .sections-card__list-wrapper {
     padding: 0 2em;
   }
 }

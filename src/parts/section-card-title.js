@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function SectionCardTitle({ title }) {
+export default function SectionCardTitle({ title, prefix }) {
   return (
-    <h4 className="sections-card__header">
+    <h4 className={`${ prefix }__list-header`}>
       {title}
     </h4>
   );
@@ -11,5 +11,6 @@ export default function SectionCardTitle({ title }) {
 if (process.env.NODE_ENV !== 'production') {
   SectionCardTitle.propTypes = {
     title: React.PropTypes.string,
+    prefix: React.PropTypes.string,
   };
 }
