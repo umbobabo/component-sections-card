@@ -9,7 +9,10 @@ export default function SectionCardLinks({ links, prefix }) {
     };
     let buttonClassName = `${ prefix }__link`;
     if (link.internal === false) {
-      commonProps.target = '_blank';
+      // Use the prop if provided, otherwise the default for external is _blank.
+      if (typeof link.target === 'undefined') {
+        commonProps.target = '_blank';
+      }
       buttonClassName = `${ buttonClassName } ${ prefix }__link--external`;
     }
     return (

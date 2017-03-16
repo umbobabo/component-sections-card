@@ -1,12 +1,14 @@
 export default {
   sections: [
     {
-      title: 'Latest updates',
+      title: 'Link with target _self',
       href: 'http://www.economist.com/latest-updates',
+      target: '_self',
     },
     {
-      title: 'Britain',
+      title: 'Link with target _blank',
       href: '/sections/britain',
+      target: '_blank',
     },
     {
       title: 'Europe',
